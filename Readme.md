@@ -5,7 +5,9 @@
 # Astuce
 
 Utilisation de plusieurs onglets de Terminal : Maj+Ctrl+T
+
 Sublime text : 
+
 	- Glisser le dossiers pour avoir l'arborescence
 	- Installer des modules/packages via Ctrl+Maj+p
 	- Package "Terminus" et editer Key-Binding : Alt+1 (tips : ipython3) --> pour testing
@@ -79,7 +81,7 @@ rostopic echo /talking_topic
 
 # Create Message
 
-Un message est un moyen d'utiliser des Topics préparamétré. Pour cela on creer un dossier "msg" contenant un fichier "MSG.msg" avec des variables (string, float, etc.). Dans le code, on importe le fichier msg comme un module python (from import)
+Un message est un moyen d'utiliser des Topics préparamétré. Pour cela on creer un dossier "msg" contenant un fichier "MSG.msg" avec des variables (string, float, etc.). Dans le code, on importe le fichier msg comme un module python (from import).
 
 Pour utiliser des messages, il faut le preciser dans le fichier "package.xml" en décommentant les lignes :
 
@@ -101,6 +103,62 @@ generate_messages(
    std_msgs
  )
 ```
+
+# Create Service
+
+Lorsqu'on veut utiliser une communication synchrone bidirectionnel entre plusieurs noeud (client/serveur), il est plus interessant d'utiliser des services. Pour cela, on creer une dossier "srv" conternant des fichier "multiplier.srv". Ces fichiers contiennent les informations d'entree et de sortie séparé par "---". Tout comme les messages, les service sont importé comme des modules en python.
+
+Ensuite, dans le CMakeList, on precise :
+
+```
+add_service_files(
+   FILES
+   multiplier.srv
+ )
+```
+
+Pour voir les services en cours :
+
+```
+rosservice list
+rosservice info /multiplier
+```
+
+Pour call un service sur la console :
+
+```
+rosservice call /multiplier "{a:10 , b:7}" # attention python2 != python3
+```
+
+# Create Launch File
+
+Pour lancer plusieurs node en meme temps suivant une certaine logique, on utilise des launchfiles. Pour cela, on creer un dossier "launch" dans le package, il contiendra les fichier ".launch". Le langage ressemble à du HTML.
+
+```
+<launch>
+   <node pkg="tutorial" type="service_server_node.py" name="service_serveur_node" output="screen"> </node>
+   <node pkg="tutorial" type="service_client_node.py" name="service_client_node" output="screen"> </node>
+</launch>
+```
+
+Pour que cela marche, il faut que les fichier ".py" soit defini comme executable :
+
+```
+ls -la
+chmod +x service_server_node.py
+chmod +x service_client_node.py
+
+```
+
+Une fois fait, il suffit de lancer la commande :
+
+```
+source devel/setup.bash
+roslaunch tutorial ros_service_example.launch
+
+```
+
+Le core ros est aussi lancé en meme temps, pas besoin de le lancer.
 
 # Objectif
 

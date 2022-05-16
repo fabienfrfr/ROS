@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/msg/Position.msg"
-services_str = ""
+services_str = "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv"
 pkg_name = "tutorial"
 dependencies_str = "std_msgs"
 langs = "gencpp;genlisp;genpy"

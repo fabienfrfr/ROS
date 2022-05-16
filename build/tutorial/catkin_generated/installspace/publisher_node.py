@@ -1,6 +1,6 @@
 import rospy
 from std_msgs.msg import String
-from tutorials.msg import Position
+from tutorial.msg import Position
 
 def talk_to_me():
 	#pub = rospy.Publisher('talking_topic', String, queue_size=10)

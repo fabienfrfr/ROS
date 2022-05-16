@@ -47,6 +47,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tutorial/srv" TYPE FILE FILES "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tutorial/cmake" TYPE FILE FILES "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/build/tutorial/catkin_generated/installspace/tutorial-msg-paths.cmake")
 endif()
 
@@ -91,5 +95,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tutorial" TYPE PROGRAM FILES "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/build/tutorial/catkin_generated/installspace/subscriber_node.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tutorial" TYPE PROGRAM FILES "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/build/tutorial/catkin_generated/installspace/service_server_node.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tutorial" TYPE PROGRAM FILES "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/build/tutorial/catkin_generated/installspace/service_client_node.py")
 endif()
 

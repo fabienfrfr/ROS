@@ -53,11 +53,10 @@ add_message_files(
  )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   multiplier.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -108,7 +107,7 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-catkin_install_python(PROGRAMS scripts/publisher_node.py scripts/subscriber_node.py
+catkin_install_python(PROGRAMS scripts/publisher_node.py scripts/subscriber_node.py scripts/service_server_node.py scripts/service_client_node.py
 DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 ###########

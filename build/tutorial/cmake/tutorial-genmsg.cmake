@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "tutorial: 1 messages, 0 services")
+message(STATUS "tutorial: 1 messages, 1 services")
 
 set(MSG_I_FLAGS "-Itutorial:/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/msg;-Istd_msgs:/usr/share/std_msgs/cmake/../msg")
 
@@ -20,6 +20,11 @@ add_custom_target(_tutorial_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "tutorial" "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/msg/Position.msg" ""
 )
 
+get_filename_component(_filename "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv" NAME_WE)
+add_custom_target(_tutorial_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "tutorial" "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv" ""
+)
+
 #
 #  langs = gencpp;genlisp;genpy
 #
@@ -34,6 +39,12 @@ _generate_msg_cpp(tutorial
 )
 
 ### Generating Services
+_generate_srv_cpp(tutorial
+  "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/tutorial
+)
 
 ### Generating Module File
 _generate_module_cpp(tutorial
@@ -48,6 +59,8 @@ add_dependencies(tutorial_generate_messages tutorial_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/msg/Position.msg" NAME_WE)
+add_dependencies(tutorial_generate_messages_cpp _tutorial_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv" NAME_WE)
 add_dependencies(tutorial_generate_messages_cpp _tutorial_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -67,6 +80,12 @@ _generate_msg_lisp(tutorial
 )
 
 ### Generating Services
+_generate_srv_lisp(tutorial
+  "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/tutorial
+)
 
 ### Generating Module File
 _generate_module_lisp(tutorial
@@ -81,6 +100,8 @@ add_dependencies(tutorial_generate_messages tutorial_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/msg/Position.msg" NAME_WE)
+add_dependencies(tutorial_generate_messages_lisp _tutorial_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv" NAME_WE)
 add_dependencies(tutorial_generate_messages_lisp _tutorial_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -100,6 +121,12 @@ _generate_msg_py(tutorial
 )
 
 ### Generating Services
+_generate_srv_py(tutorial
+  "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/tutorial
+)
 
 ### Generating Module File
 _generate_module_py(tutorial
@@ -114,6 +141,8 @@ add_dependencies(tutorial_generate_messages tutorial_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/msg/Position.msg" NAME_WE)
+add_dependencies(tutorial_generate_messages_py _tutorial_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/srv/multiplier.srv" NAME_WE)
 add_dependencies(tutorial_generate_messages_py _tutorial_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

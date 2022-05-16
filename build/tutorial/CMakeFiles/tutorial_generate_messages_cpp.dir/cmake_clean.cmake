@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/devel/include/tutorial/Position.h"
+  "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/devel/include/tutorial/multiplier.h"
   "CMakeFiles/tutorial_generate_messages_cpp"
 )
 

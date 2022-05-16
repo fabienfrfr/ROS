@@ -23,6 +23,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/CMakeLists.txt"
   "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/package.xml"
   "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/scripts/publisher_node.py"
+  "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/scripts/service_client_node.py"
+  "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/scripts/service_server_node.py"
   "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/scripts/subscriber_node.py"
   "/usr/lib/x86_64-linux-gnu/cmake/GTest/GMockTargets-none.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/GTest/GMockTargets.cmake"
@@ -213,6 +215,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "atomic_configure/publisher_node.py"
   "tutorial/catkin_generated/stamps/tutorial/subscriber_node.py.stamp"
   "atomic_configure/subscriber_node.py"
+  "tutorial/catkin_generated/stamps/tutorial/service_server_node.py.stamp"
+  "atomic_configure/service_server_node.py"
+  "tutorial/catkin_generated/stamps/tutorial/service_client_node.py.stamp"
+  "atomic_configure/service_client_node.py"
   "tutorial/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -228,6 +234,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "tutorial/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
   "tutorial/CMakeFiles/tutorial_generate_messages.dir/DependInfo.cmake"
   "tutorial/CMakeFiles/_tutorial_generate_messages_check_deps_Position.dir/DependInfo.cmake"
+  "tutorial/CMakeFiles/_tutorial_generate_messages_check_deps_multiplier.dir/DependInfo.cmake"
   "tutorial/CMakeFiles/tutorial_generate_messages_cpp.dir/DependInfo.cmake"
   "tutorial/CMakeFiles/tutorial_gencpp.dir/DependInfo.cmake"
   "tutorial/CMakeFiles/tutorial_generate_messages_lisp.dir/DependInfo.cmake"
