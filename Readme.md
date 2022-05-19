@@ -8,11 +8,13 @@ Utilisation de plusieurs onglets de Terminal : Maj+Ctrl+T
 
 Sublime text : 
 
-	- Glisser le dossiers pour avoir l'arborescence
+	- Glisser le dossier pour avoir l'arborescence
 	- Installer des modules/packages via Ctrl+Maj+p
-	- Package "Terminus" et editer Key-Binding : Alt+1 (tips : ipython3) --> pour testing
+	- Package "Terminus" et éditer Key-Binding : Alt+1 (tips : ipython3) --> pour testing
 
 # ROS installation
+
+Sous Linux (Ubuntu) :
 
 ``` 
 sudo apt install ros-desktop-full
@@ -46,18 +48,18 @@ En python, on utilise principalement les dépendances "rospy" et "std_msgs".
 
 # Create Nodes
 
-Pour lancer les nodes "rosrun", il est necessaire que "roscore" soit executé dans une fenetre.
+Pour lancer les nodes "rosrun", il est nécessaire que "roscore" soit exécuté dans une fenêtre.
 
-Le roscore est le coeurs "master" du middleware ROS. Un noeud est un fichiers et les Topics sont moyen de communiquer avec les noeuds.
+Le roscore est le cœur "master" du middleware ROS. Un nœud est un fichier et les topics sont un moyen de communiquer avec les nœuds.
 
-Les noeuds sont contenus dans les packages et en Python, c'est un fichier avec l'extension ".py". Pour cela, on creer un dossiers "scripts" dans le package qui contiendra les différents noeuds python.
+Les nœuds sont contenus dans les packages et en Python, c'est un fichier avec l'extension ".py". Pour cela, on crée un dossier "scripts" dans le package qui contiendra les différents nœuds python.
 
-Il faut ensuite preciser les noeuds dans le CMakeLists.txt :
+Il faut ensuite préciser les nœuds dans le CMakeLists.txt :
 ```
 catkin_install_python(PROGRAMS script/node1.py script/node2.py ... )
 ```
 
-Aller dans le dossier parent et lancer la commande "catkin_make" pour recompiler. À partir d'ici, le script peut etre modifié sans avoir besoin de recompiler (pour python). Pour lancer le node :
+Aller dans le dossier parent et lancer la commande "catkin_make" pour recompiler. À partir d'ici, le script peut être modifié sans avoir besoin de recompiler (pour python). Pour lancer le node :
 
 ```
 # terminal 1
@@ -70,9 +72,9 @@ source devel/setup.bash
 rosrun tutorial subscriber_node.py
 ```
 
-Remarque : La source doit toujours etre lancé pour que rosrun fonctionne. Si on arrete le rosrun publisher, le subscriber est en attente.
+Remarque : La source doit toujours être lancée pour que rosrun fonctionne. Si on arrête le rosrun publisher, le subscriber est en attente.
 
-Pour voir les topic en cours et les messages :
+Pour voir les topics en cours et les messages :
 
 ```
 rostopic list
@@ -81,9 +83,9 @@ rostopic echo /talking_topic
 
 # Create Message
 
-Un message est un moyen d'utiliser des Topics préparamétré. Pour cela on creer un dossier "msg" contenant un fichier "MSG.msg" avec des variables (string, float, etc.). Dans le code, on importe le fichier msg comme un module python (from import).
+Un message est un moyen d'utiliser des topics pré-paramétré. Pour cela on crée un dossier "msg" contenant un fichier "MSG.msg" avec des variables (string, float, etc.). Dans le code, on importe le fichier msg comme un module python (from import).
 
-Pour utiliser des messages, il faut le preciser dans le fichier "package.xml" en décommentant les lignes :
+Pour utiliser des messages, il faut le préciser dans le fichier "package.xml" en dé-commentant les lignes :
 
 ```
   <build_depend>message_generation</build_depend>
@@ -106,9 +108,9 @@ generate_messages(
 
 # Create Service
 
-Lorsqu'on veut utiliser une communication synchrone bidirectionnel entre plusieurs noeud (client/serveur), il est plus interessant d'utiliser des services. Pour cela, on creer une dossier "srv" conternant des fichier "multiplier.srv". Ces fichiers contiennent les informations d'entree et de sortie séparé par "---". Tout comme les messages, les service sont importé comme des modules en python.
+Lorsqu'on veut utiliser une communication synchrone bidirectionnelle entre plusieurs nœuds (client/serveur), il est plus intéressant d'utiliser des services. Pour cela, on crée un dossier "srv" contenant des fichiers "multiplier.srv". Ces fichiers contiennent les informations d’entrée et de sortie séparée par "---". Tout comme les messages, les services sont importés comme des modules en python.
 
-Ensuite, dans le CMakeList, on precise :
+Ensuite, dans le CMakeList, on précise :
 
 ```
 add_service_files(
@@ -132,7 +134,7 @@ rosservice call /multiplier "{a:10 , b:7}" # attention python2 != python3
 
 # Create Launch File
 
-Pour lancer plusieurs node en meme temps suivant une certaine logique, on utilise des launchfiles. Pour cela, on creer un dossier "launch" dans le package, il contiendra les fichier ".launch". Le langage ressemble à du HTML.
+Pour lancer plusieurs nodes en même temps suivant une certaine logique, on utilise des launchfiles. Pour cela, on créer un dossier "launch" dans le package, il contiendra les fichiers ".launch". Le langage ressemble à du HTML.
 
 ```
 <launch>
@@ -141,7 +143,7 @@ Pour lancer plusieurs node en meme temps suivant une certaine logique, on utilis
 </launch>
 ```
 
-Pour que cela marche, il faut que les fichier ".py" soit defini comme executable :
+Pour que cela marche, il faut que les fichiers ".py" soit defini comme executable :
 
 ```
 ls -la
@@ -158,7 +160,7 @@ roslaunch tutorial ros_service_example.launch
 
 ```
 
-Le core ros est aussi lancé en meme temps, pas besoin de le lancer.
+Le core ros est aussi lancé en même temps, pas besoin de le lancer.
 
 # Objectif
 
