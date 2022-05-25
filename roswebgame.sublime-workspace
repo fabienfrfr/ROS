@@ -8,53 +8,22 @@
 	"buffers":
 	[
 		{
-			"file": "Readme.md",
+			"file": "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/HEROKU/fabienfrfr/requirements.txt",
 			"settings":
 			{
-				"buffer_size": 4789,
-				"encoding": "UTF-8",
+				"buffer_size": 149,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/Source",
+			"settings":
+			{
+				"buffer_size": 344,
 				"line_ending": "Unix"
 			},
 			"undo_stack":
 			[
-				[
-					3,
-					1,
-					"left_delete",
-					null,
-					"AQAAAHUBAAAAAAAAdQEAAAAAAAAaAAAALCBwYWNrYWdlIERlYmlhbiBpbnTDqWdyw6k",
-					"AQAAAAAAAAABAAAAjQEAAAAAAAB1AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					4,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAHUBAAAAAAAAdgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAdQEAAAAAAAB1AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					5,
-					1,
-					"insert_snippet",
-					{
-						"contents": "($0)"
-					},
-					"AQAAAHYBAAAAAAAAeAEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAdgEAAAAAAAB2AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					6,
-					1,
-					"insert",
-					{
-						"characters": "Ubuntu"
-					},
-					"BgAAAHcBAAAAAAAAeAEAAAAAAAAAAAAAeAEAAAAAAAB5AQAAAAAAAAAAAAB5AQAAAAAAAHoBAAAAAAAAAAAAAHoBAAAAAAAAewEAAAAAAAAAAAAAewEAAAAAAAB8AQAAAAAAAAAAAAB8AQAAAAAAAH0BAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAdwEAAAAAAAB3AQAAAAAAAAAAAAAAAPC/"
-				]
 			]
 		}
 	],
@@ -96,17 +65,15 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame",
-		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src",
-		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial",
-		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/scripts",
-		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/src"
-	],
 	"file_history":
 	[
+		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/HEROKU/fabienfrfr/README.md",
+		"/media/fabienfrfr/F6166FAF166F7013/1_PERSO/Ubuntu_22.04_save_220519/Installation.md",
+		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/HEROKU/README.md",
 		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/Readme.md",
+		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/HEROKU/README",
+		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/GIT/PAT.txt",
+		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/GIT/github-recovery-codes.txt",
 		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/scripts/subscriber_node.py",
 		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/scripts/service_server_node.py",
 		"/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/RosWebGame/src/tutorial/scripts/service_client_node.py",
@@ -152,27 +119,54 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Readme.md",
-					"selected": true,
+					"file": "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/HEROKU/fabienfrfr/requirements.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4789,
+						"buffer_size": 149,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								192,
-								192
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/media/fabienfrfr/F6166FAF166F7013/0_JOBS/ROBOT/Source",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								315,
+								344
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -263,7 +257,7 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 280.0,
